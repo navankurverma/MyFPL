@@ -1,0 +1,8 @@
+requests
+numpy
+pandas
+json
+matplotlib
+seaborn
+cufflinks
+plotly.express
