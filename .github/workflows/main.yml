@@ -2,8 +2,9 @@ name: FPL_Update
 
 on:
    schedule:
-     - cron: '19 11 * * *'
-     - cron: '0 4 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
+      - cron: '27 11 * * *'
+      - cron: '30 11 * * *' 
+      - cron: '0 4 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
 
 jobs:
   updatedata:
