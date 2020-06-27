@@ -2,6 +2,7 @@ name: FPL_Update
 
 on:
    schedule:
+     - cron: '18 11 * *'
      - cron: '0 4 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
 
 jobs:
@@ -40,7 +41,7 @@ jobs:
       #datetime.today().strftime('%Y-%m-%d')'
     
     - name: Commit and Push Only if file updated
-      if: git diff --exit-code  
+      if: 'git diff --exit-code'
       run: |
         git add -u
         git commit -m "github-actions added date data"
