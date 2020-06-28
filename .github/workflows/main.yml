@@ -3,7 +3,7 @@ name: FPL_Update
 on:
    schedule: 
       - cron: '0 4 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
-      - cron: '50 12 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
+      - cron: '04 13 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
 
 jobs:
   updatedata:
@@ -41,8 +41,7 @@ jobs:
       #datetime.today().strftime('%Y-%m-%d')'
     - name: check for changes
       run: |
-        if git diff --exit-code
-        then
+        if git diff --exit-code; then
             echo "::set-env name=changes_exist::true"
         else
             echo "::set-env name=changes_exist::false"   
