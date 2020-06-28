@@ -45,7 +45,7 @@ jobs:
             echo "::set-env name=changes_exist::true"
         else
             echo "::set-env name=changes_exist::false"   
-        fi
+        fi;
         
     - name: Commit and Push Only if file updated
       if: env.changes_exist == 'true'
