@@ -3,7 +3,7 @@ name: FPL_Update
 on:
    schedule: 
       - cron: '0 4 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
-      - cron: '35 12 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
+      - cron: '50 12 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
 
 jobs:
   updatedata:
@@ -47,7 +47,6 @@ jobs:
         else
             echo "::set-env name=changes_exist::false"   
         fi
-        env.changes_exist
         
     - name: Commit and Push Only if file updated
       if: env.changes_exist == 'true'
