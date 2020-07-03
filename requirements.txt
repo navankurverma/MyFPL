@@ -6,4 +6,5 @@ seaborn
 cufflinks
 plotly.express
 nbconvert
+runipy
 jupyter
