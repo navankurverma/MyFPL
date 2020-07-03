@@ -3,7 +3,7 @@ name: FPL_Update
 on:
    schedule: 
       - cron: '0 4 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
-      - cron: '46 16 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
+      - cron: '59 17 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
 
 jobs:
   updatedata:
@@ -29,6 +29,7 @@ jobs:
         pip install -r requirements.txt
     - name: Run the nb
       run: |
+        jupyter nbconvert --execute --clear-output Navankur_Verma_FPL_PlayerSelector.ipynb
         jupyter nbconvert Navankur_Verma_FPL_PlayerSelector.ipynb
       # change this config settings according to your need
     - name: Configure Git
