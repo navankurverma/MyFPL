@@ -29,7 +29,7 @@ jobs:
     - name: Run the nb
       run: |
         jupyter nbconvert --execute --clear-output Navankur_Verma_FPL_PlayerSelector.ipynb
-        jupyter nbconvert Navankur_Verma_FPL_PlayerSelector.ipynb
+        jupyter nbconvert --to html Navankur_Verma_FPL_PlayerSelector.ipynb
       # change this config settings according to your need
     - name: Configure Git
       run: |
