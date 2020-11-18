@@ -3,12 +3,14 @@ name: FPL_Update
 on:
    schedule: 
       - cron: '0 4 * * 1,3,5' #At 4 AM UTC every day (use https://crontab.guru/ for format)
+      - cron: '55 10 * * *' #At 4 AM UTC every day (use https://crontab.guru/ for format)
         
 jobs:
   updatedata:
     
     env:
       REMOTE_BRANCH: master
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
     runs-on: ubuntu-latest
     
